@@ -162,6 +162,8 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
         if(buildTag != null){
         	caps.setCapability("build", buildTag);
         }
+	    
+	caps.setCapability("deviceOrientation", System.getenv("SELENIUM_DEVICE_ORIENTATION"));
         
         //caps.setCapability("name", name.getMethodName();;
         //caps.setCapability("build", name.getMethodName() + "__" + System.getenv("BUILD_NUMBER"));
